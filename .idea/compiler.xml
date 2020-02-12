@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for microservicecommon" enabled="true">
+        <sourceOutputDir name="src/main/generated" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="outputDirectory" value="C:\Users\szymon.rogalski\git\micser\microservice-common/src/main" />
+        <processor name="io.vertx.codegen.CodeGenProcessor" />
+        <module name="microservicecommon" />
+      </profile>
+      <profile name="Annotation profile for micser" enabled="true">
+        <sourceOutputDir name="src/main/generated" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="outputDirectory" value="C:\Users\szymon.rogalski\git\micser\loss-microservice/src/main" />
+        <processor name="io.vertx.codegen.CodeGenProcessor" />
+        <module name="lossmicroservice" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+= Cheatsheets
+
+[[Loss]]
+== Loss
+
+
+[cols=">25%,25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[lossAmount]]`@lossAmount`|`Number (double)`|-
+|[[lossId]]`@lossId`|`String`|-
+|===
+
