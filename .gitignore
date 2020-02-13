@@ -1,0 +1,5 @@
+./loss-microservice/src/main/generated/*
+.idea/*
+target
+./loss-microservice/target/*
+./microservice-common/target/*
