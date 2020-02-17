@@ -1,7 +1,0 @@
-com\rogaszy\micser\microservice\loss\impl\LossServiceImpl.class
-com\rogaszy\micser\microservice\loss\LossConverter.class
-com\rogaszy\micser\microservice\loss\LossServiceVertxEBProxy.class
-com\rogaszy\micser\microservice\loss\LossService.class
-com\rogaszy\micser\microservice\loss\Loss.class
-com\rogaszy\micser\microservice\loss\package-info.class
-com\rogaszy\micser\microservice\loss\LossServiceVertxProxyHandler.class

@@ -92,15 +92,14 @@ public class LossServiceImpl extends JdbcRepositoryWrapper implements LossServic
 
     // SQL statements
 
-    private static final String CREATE_STATEMENT = "CREATE TABLE IF NOT EXISTS `loss` (\n" +
-            "  `lossId` VARCHAR(60) NOT NULL,\n" +
-            "  `lossAmount` double NOT NULL,\n" +
-            "  PRIMARY KEY (`lossId`),\n" +
-            "  KEY `index_seller` (`sellerId`) )";
-    private static final String INSERT_STATEMENT = "INSERT INTO loss (`lossId`, `lossAmount`) VALUES (?, ?yr)";
-    private static final String FETCH_STATEMENT = "SELECT * FROM loss WHERE lossId = ?";
-    private static final String FETCH_ALL_STATEMENT = "SELECT * FROM loss";
-    private static final String FETCH_WITH_PAGE_STATEMENT = "SELECT * FROM loss LIMIT ?, ?";
-    private static final String DELETE_STATEMENT = "DELETE FROM loss WHERE lossId = ?";
-    private static final String DELETE_ALL_STATEMENT = "DELETE FROM loss";
+    private static final String CREATE_STATEMENT = "CREATE TABLE IF NOT EXISTS \"Losses\" " +
+            "( \"lossId\" VARCHAR(60) NOT NULL, " +
+            "  \"lossAmount\" double NOT NULL,  " +
+            " PRIMARY KEY (\"lossId\") )";
+    private static final String INSERT_STATEMENT = "INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\") VALUES (?, ?)";
+    private static final String FETCH_STATEMENT = "SELECT * FROM \"Losses\" WHERE \"lossId\" = ?";
+    private static final String FETCH_ALL_STATEMENT = "SELECT * FROM \"Losses\"";
+    private static final String FETCH_WITH_PAGE_STATEMENT = "SELECT * FROM \"Losses\" LIMIT ? OFFSET ?";
+    private static final String DELETE_STATEMENT = "DELETE FROM \"Losses\" WHERE \"lossId\" = ?";
+    private static final String DELETE_ALL_STATEMENT = "DELETE FROM \"Losses\"";
 }

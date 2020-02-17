@@ -11,6 +11,10 @@
 
     <artifactId>loss-microservice</artifactId>
 
+    <properties>
+        <main.verticle>com.rogaszy.micser.microservice.loss.LossVerticle</main.verticle>
+    </properties>
+
 
     <dependencies>
         <dependency>
@@ -25,5 +29,21 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- plugin to create a `fat-jar` -->
+                <artifactId>maven-shade-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

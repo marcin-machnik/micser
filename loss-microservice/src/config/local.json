@@ -1,0 +1,7 @@
+{
+  "api.name": "loss",
+  "url": "jdbc:hsqldb:file:db/loss",
+  "driver_class": "org.hsqldb.jdbcDriver",
+  "loss.http.port" : 8082,
+  "loss.http.address" : "127.0.0.1"
+}
