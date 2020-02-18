@@ -24,7 +24,7 @@ public class RestLossAPIVerticle extends RestAPIVerticle {
     private static final String API_ADD = "/add";
 //    private static final String API_RETRIEVE_BY_PAGE = "/loss";
     private static final String API_RETRIEVE_ALL = "/loss";
-    private static final String API_RETRIEVE_PRICE = "/:lossId/price";
+    private static final String API_RETRIEVE_AMOUNT = "/:lossId/amount";
     private static final String API_RETRIEVE = "/:lossId";
     private static final String API_UPDATE = "/:lossId";
     private static final String API_DELETE = "/:lossId";
@@ -46,7 +46,7 @@ public class RestLossAPIVerticle extends RestAPIVerticle {
         router.post(API_ADD).handler(this::apiAdd);
 //        router.get(API_RETRIEVE_BY_PAGE).handler(this::apiRetrieveByPage);
         router.get(API_RETRIEVE_ALL).handler(this::apiRetrieveAll);
-        //router.get(API_RETRIEVE_AMOUNT).handler(this::apiRetrievePrice);
+        router.get(API_RETRIEVE_AMOUNT).handler(this::apiRetrieveAmount);
         router.get(API_RETRIEVE).handler(this::apiRetrieve);
         router.patch(API_UPDATE).handler(this::apiUpdate);
         router.delete(API_DELETE).handler(this::apiDelete);
@@ -83,10 +83,10 @@ public class RestLossAPIVerticle extends RestAPIVerticle {
         service.retrieveLoss(lossId, resultHandlerNonEmpty(context));
     }
 
-//    private void apiRetrieveAmount(RoutingContext context) {
-//        String lossId = context.request().getParam("lossId");
-//        service.retrieveLossAmount(lossId, resultHandlerNonEmpty(context));
-//    }
+    private void apiRetrieveAmount(RoutingContext context) {
+        String lossId = context.request().getParam("lossId");
+        service.retrieveLossAmount(lossId, resultHandlerNonEmpty(context));
+    }
 
     private void apiRetrieveByPage(RoutingContext context) {
         try {

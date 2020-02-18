@@ -50,7 +50,7 @@ public class LossServiceImpl extends JdbcRepositoryWrapper implements LossServic
 
     @Override
     public LossService retrieveLossAmount(String lossId, Handler<AsyncResult<JsonObject>> resultHandler) {
-        this.retrieveOne(lossId, "SELECT amount FROM loss WHERE lossId = ?")
+        this.retrieveOne(lossId, "SELECT \"lossAmount\" FROM \"Losses\" WHERE \"lossId\" = ?")
                 .map(option -> option.orElse(null))
                 .setHandler(resultHandler);
         return this;
