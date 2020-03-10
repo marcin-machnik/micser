@@ -12,6 +12,9 @@
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
+|[[businessLine]]`@businessLine`|`String`|-
+|[[currency]]`@currency`|`String`|-
+|[[linkGroupId]]`@linkGroupId`|`Number (Short)`|-
 |[[lossAmount]]`@lossAmount`|`Number (double)`|-
 |[[lossId]]`@lossId`|`String`|-
 |===

@@ -17,9 +17,10 @@ public class ExampleHelper {
         Connection connection = DriverManager.getConnection(config.getString("url"),
           config.getString("user"), config.getString("password"));
         connection.createStatement().executeUpdate("DELETE FROM \"Losses\"");
-        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\") VALUES ('small', 1234)");
-        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\") VALUES ('medium', 1234)");
-        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\") VALUES ('large', 1234)");
+        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\", \"currency\", \"businessLine\", \"linkGroupId\") " +
+                                                        "VALUES ('small', 1234, 'USD', 'regular', 2)");
+        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" VALUES ('medium', 2222, 'PLN', 'group', 3)");
+        connection.createStatement().executeUpdate("INSERT INTO \"Losses\" VALUES ('large', 9999, 'EUR', 'regular', 3)");
         future.complete();
       } catch (SQLException ex) {
         ex.printStackTrace();

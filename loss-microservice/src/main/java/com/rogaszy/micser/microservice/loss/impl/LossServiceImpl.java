@@ -95,8 +95,12 @@ public class LossServiceImpl extends JdbcRepositoryWrapper implements LossServic
     private static final String CREATE_STATEMENT = "CREATE TABLE IF NOT EXISTS \"Losses\" " +
             "( \"lossId\" VARCHAR(60) NOT NULL, " +
             "  \"lossAmount\" double NOT NULL,  " +
+            "  \"currency\" VARCHAR(3) NOT NULL,  " +
+            "  \"businessLine\" VARCHAR(100) NOT NULL,  " +
+            "  \"linkGroupId\" integer NOT NULL,  " +
             " PRIMARY KEY (\"lossId\") )";
-    private static final String INSERT_STATEMENT = "INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\") VALUES (?, ?)";
+    private static final String INSERT_STATEMENT =
+       "INSERT INTO \"Losses\" (\"lossId\", \"lossAmount\", \"currency\", \"businessLine\", \"linkGroupId\") VALUES (?, ?, ?, ?, ?)";
     private static final String FETCH_STATEMENT = "SELECT * FROM \"Losses\" WHERE \"lossId\" = ?";
     private static final String FETCH_ALL_STATEMENT = "SELECT * FROM \"Losses\"";
     private static final String FETCH_WITH_PAGE_STATEMENT = "SELECT * FROM \"Losses\" LIMIT ? OFFSET ?";
