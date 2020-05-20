@@ -6,4 +6,13 @@ loss-microservice/target/*
 loss-microservice/src/db/
 loss-microservice/src/main/generated/
 microservice-common/target/
+.project
+.settings/
+loss-microservice/.classpath
+loss-microservice/.project
+loss-microservice/.settings/
+loss-microservice/db/
+microservice-common/.classpath
+microservice-common/.project
+microservice-common/.settings/
 

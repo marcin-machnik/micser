@@ -24,13 +24,15 @@ public class RestLossAPIVerticle extends RestAPIVerticle {
     private static final String API_ADD = "/add";
 //    private static final String API_RETRIEVE_BY_PAGE = "/loss";
     private static final String API_RETRIEVE_ALL = "/loss";
-    private static final String API_RETRIEVE_AMOUNT = "/:lossId/amount";
-    private static final String API_RETRIEVE = "/:lossId";
+    private static final String API_RETRIEVE_AMOUNT = "/loss/:lossId/amount";
+    private static final String API_RETRIEVE = "/loss/:lossId";
     private static final String API_UPDATE = "/:lossId";
     private static final String API_DELETE = "/:lossId";
     private static final String API_DELETE_ALL = "/all";
 
     private final LossService service;
+    
+    
 
     public RestLossAPIVerticle(LossService service) {
         this.service = service;

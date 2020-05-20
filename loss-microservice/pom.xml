@@ -13,6 +13,9 @@
 
     <properties>
         <main.verticle>com.rogaszy.micser.microservice.loss.LossVerticle</main.verticle>
+        
+        <vertx.verticle>com.rogaszy.micser.microservice.loss.LossVerticle</vertx.verticle>
+        <vertx.config>src/config/local.json</vertx.config>
     </properties>
 
 
