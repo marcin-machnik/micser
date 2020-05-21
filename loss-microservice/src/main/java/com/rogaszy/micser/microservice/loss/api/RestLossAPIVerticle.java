@@ -32,8 +32,6 @@ public class RestLossAPIVerticle extends RestAPIVerticle {
 
     private final LossService service;
     
-    
-
     public RestLossAPIVerticle(LossService service) {
         this.service = service;
     }
