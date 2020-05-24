@@ -38,8 +38,8 @@ public class RestMonitorVerticle extends RestAPIVerticle{
 		router.get(API_RETRIEVE_ALL).handler(this::apiRetrieveAll);
 		
 		  // get HTTP host and port from configuration, or use default value
-        String host = config().getString("loss.http.address", "0.0.0.0");
-        int port = config().getInteger("loss.http.port", 8085);
+        String host = config().getString("monitor.http.address", "0.0.0.0");
+        int port = config().getInteger("monitor.http.port", 8085);
 
         // create HTTP server and publish REST service
         createHttpServer(router, host, port)
