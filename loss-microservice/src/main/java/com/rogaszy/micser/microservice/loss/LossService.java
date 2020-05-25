@@ -117,4 +117,9 @@ public interface LossService {
     @Fluent
     LossService deleteAllLoss(Handler<AsyncResult<Void>> resultHandler);
 
+    /**
+     * 
+     */
+    @Fluent
+    LossService ping(Handler<AsyncResult<String>> resultHandler);
 }

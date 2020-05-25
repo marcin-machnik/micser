@@ -1,6 +1,7 @@
 package com.rogaszy.micser.microservice.loss.impl;
 
 import io.vertx.core.AsyncResult;
+import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonArray;
@@ -90,6 +91,14 @@ public class LossServiceImpl extends JdbcRepositoryWrapper implements LossServic
         return this;
     }
 
+    @Override
+    public LossService ping(Handler<AsyncResult<String>> resultHandler) {
+    	String msg = "You have connected by Event bus with -> "+LossService.class.getSimpleName();
+    	
+    	resultHandler.handle(Future.succeededFuture(msg));
+    	return this;
+    }
+
     // SQL statements
 
     private static final String CREATE_STATEMENT = "CREATE TABLE IF NOT EXISTS \"Losses\" " +
@@ -106,4 +115,5 @@ public class LossServiceImpl extends JdbcRepositoryWrapper implements LossServic
     private static final String FETCH_WITH_PAGE_STATEMENT = "SELECT * FROM \"Losses\" LIMIT ? OFFSET ?";
     private static final String DELETE_STATEMENT = "DELETE FROM \"Losses\" WHERE \"lossId\" = ?";
     private static final String DELETE_ALL_STATEMENT = "DELETE FROM \"Losses\"";
+
 }
