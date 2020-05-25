@@ -1,5 +1,5 @@
 {
   "api.name": "monitor",
-  "loss.http.port" : 8095,
-  "loss.http.address" : "127.0.0.1"
+  "monitor.http.port" : 8095,
+  "monitor.http.address" : "127.0.0.1"
 }
