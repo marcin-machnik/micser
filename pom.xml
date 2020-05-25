@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>microservice-common</module>
+        <module>microservice-monitor</module>
         <module>loss-microservice</module>
     </modules>
 

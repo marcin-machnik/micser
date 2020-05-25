@@ -5,9 +5,12 @@ import io.vertx.codegen.annotations.ProxyGen;
 import io.vertx.codegen.annotations.VertxGen;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 
 import java.util.List;
+
+import com.rogaszy.micser.microservice.loss.impl.LossServiceImpl;
 
 
 @VertxGen
@@ -30,8 +33,14 @@ public interface LossService {
      * @param config a json object for configuration
      * @return initialized loss service
      */
-    //static LossService createService(Vertx vertx, JsonObject config)
+    static LossService createService(Vertx vertx, JsonObject config) {
+	    return new LossServiceImpl(vertx, config);
+	}
 
+	static LossService createProxy(Vertx vertx, String address) {
+		return new LossServiceVertxEBProxy(vertx, address);
+	}
+    
     /**
      * Initialize the persistence.
      *
