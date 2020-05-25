@@ -15,4 +15,5 @@ loss-microservice/db/
 microservice-common/.classpath
 microservice-common/.project
 microservice-common/.settings/
-
+microservice-monitor/.classpath
+microservice-monitor/bin

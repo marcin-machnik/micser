@@ -25,25 +25,13 @@
             <artifactId>microservice-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        
         <dependency>
             <groupId>com.rogaszy.micser</groupId>
             <artifactId>loss-microservice</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-<!--        
-		<dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-jdbc-client</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>2.3.3</version>
-        </dependency>
--->
+        
     </dependencies>
 
     <build>
