@@ -23,7 +23,7 @@ public class MonitorVerticle extends BaseMicroserviceVerticle{
 		
 		service.retrieveLoss("small", r -> {
 			if (r.succeeded()) {
-				logger.info("small loss: " + r.result().toString() );
+				logger.info("**** [SERVICE INVOCATION SUCCEED] ****");
 			} else {
 				logger.info("FAILED: " + r.cause() );
 			}
