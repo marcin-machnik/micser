@@ -21,9 +21,9 @@ public class MonitorVerticle extends BaseMicroserviceVerticle{
 		
 //		deployRestService(service);
 		
-		service.retrieveLoss("small", r -> {
+		service.ping(r -> {
 			if (r.succeeded()) {
-				logger.info("**** [SERVICE INVOCATION SUCCEED] ****");
+				logger.info("**** [SERVICE INVOCATION SUCCEED] **** " + r.result());
 			} else {
 				logger.info("FAILED: " + r.cause() );
 			}
@@ -37,4 +37,8 @@ public class MonitorVerticle extends BaseMicroserviceVerticle{
 				future.completer());
 		return future.map(r -> null);
 	}
+	
+	
+	
+	
 }
